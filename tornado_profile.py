@@ -3,7 +3,10 @@
 import cProfile
 import logging
 import pstats
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 import tornado.web
 import yappi
 
